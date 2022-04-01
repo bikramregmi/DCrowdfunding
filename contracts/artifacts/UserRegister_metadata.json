@@ -7,23 +7,8 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "GetUser",
+				"name": "getUser",
 				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
 					{
 						"internalType": "string",
 						"name": "",
@@ -56,7 +41,7 @@
 						"type": "string"
 					}
 				],
-				"name": "SetUser",
+				"name": "setUser",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -90,11 +75,11 @@
 	},
 	"sources": {
 		"contracts/UserRegister.sol": {
-			"keccak256": "0xe4f56d4df57cad7a28fb877514c17712303e6cb6057c0bda874243dd03528c27",
+			"keccak256": "0x9e5f58f6d71936472d021c77ecf571bf93c8133334ebbe75ed24f9417bb8d5ce",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cdb34b295ab7bfbe363d3e5354838dbad6757ee01793db95ac76e7528bd706e6",
-				"dweb:/ipfs/QmVajQtTDfbxd6RuuRFVjRvVmWMf3og9G6p55LuqggXnLq"
+				"bzz-raw://f7822af6445b55f345c59d4e1fcbcb4b7564fedc643be14b15b9e34b3502eb4b",
+				"dweb:/ipfs/QmNcavGsdqY8XL9NNagKDiveXtn5ieRR7q5xwxPVh1yp9u"
 			]
 		}
 	},

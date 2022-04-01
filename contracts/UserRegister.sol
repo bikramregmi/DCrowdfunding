@@ -9,7 +9,7 @@ contract UserRegister {
     string password;
     string confirmPassword;
 
-    function SetUser(string memory _userName, string memory _email, string memory _password, string memory _confirmPassword) public {
+    function setUser(string memory _userName, string memory _email, string memory _password, string memory _confirmPassword) public {
      
          userName=_userName;
          email=_email;
@@ -18,7 +18,7 @@ contract UserRegister {
 
     }
 
-    function GetUser() public view returns(string memory,string memory,string memory,string memory){
-        return(userName,email,password,confirmPassword);
+    function getUser() public view returns(string memory){
+        return userName;
     }
 }
