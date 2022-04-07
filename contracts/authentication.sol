@@ -13,8 +13,6 @@ contract Authentication {
         address userAddress;
     }
 
-    event message(string message);
-
 
     mapping(address => User) private user;
 
@@ -22,7 +20,7 @@ contract Authentication {
         nbOfUsers = 0;
     }
 
-    function register(string memory _signature, string memory email, string memory username, string memory password, string memory repeatPassword) public {
+    function register(string memory _signature, string memory email, string memory username, string memory password, string memory repeatPassword) public returns(string memory) {
         // require(
         //     user[msg.sender].userAddress ==
         //         address(),
@@ -40,6 +38,7 @@ contract Authentication {
             "Successfully Registered"
         );
         emit message("Successfully Registered");
+        return "Successfully Registered";
     }
 
     function getSignatureHash() public view returns (string memory) {
@@ -49,23 +48,33 @@ contract Authentication {
     }
 
     function getUserAddress() public view returns (address) {
+
         return user[msg.sender].userAddress;
     }
 
-    function getUsername() public view returns (string memory) {
-        return user[msg.sender].username;
+    function getMessage() public view returns () {
+
+        return "User doesnot exist !! Register and try again !!";
     }
-    function login(string memory username, string memory password) public {
+
+    function getUsername() public view returns (string memory) {
+
+        return user[msg.sender].username;
+
+    }
+    function login(string memory username, string memory password) public returns(string memory) {
 
         string memory _username= getUsername();
+
         string memory _password= user[msg.sender].password;
 
         if(keccak256(bytes(_username)) == keccak256(bytes(username)) && keccak256(bytes(_password)) == keccak256(bytes(password)) ) {
-
-            emit message(username);
+            
+            return username;
+        
         } else {
 
-            emit message("User doesnot exist !! Register and try again !!") ;
+            return "User doesnot exist !! Register and try again !!";
         }
     }
        

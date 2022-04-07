@@ -76,7 +76,13 @@
 					}
 				],
 				"name": "login",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -122,7 +128,13 @@
 					}
 				],
 				"name": "register",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -155,11 +167,11 @@
 	},
 	"sources": {
 		"contracts/authentication.sol": {
-			"keccak256": "0x4ad29338a990387b96f501c03e4e962d99263fdd8cff9912825401b61ad39b3c",
+			"keccak256": "0x90316e19a3baa314f2d7d772a56fd8194f220b86f331d051305bb012f334994b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ecaf47060329b4ba3a12e2b5da8555d67f4caec015f509e7ba40aa36d5550eae",
-				"dweb:/ipfs/QmPnPa1v8QZqKfG5kfFy7jkrow8nNJiaiAEaCXu1YgA8nG"
+				"bzz-raw://eae9876a90e61db208b4dc10339ed294d0bb6323f1214e96d35fd854d5e83c1b",
+				"dweb:/ipfs/QmTtUviPWmgpnNACARtimt35BFkn2PbjnksJAn1ynCcF5C"
 			]
 		}
 	},
