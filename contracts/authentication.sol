@@ -13,18 +13,21 @@ contract Authentication {
         address userAddress;
     }
 
+    event message(string message);
+
+
     mapping(address => User) private user;
 
     constructor() {
         nbOfUsers = 0;
     }
 
-    function register(string memory _signature, string memory email, string memory username, string memory password, string memory repeatPassword) public returns(string memory) {
-        require(
-            user[msg.sender].userAddress ==
-                address(0x0000000000000000000000000000000000000000),
-            "already registered"
-        );
+    function register(string memory _signature, string memory email, string memory username, string memory password, string memory repeatPassword) public {
+        // require(
+        //     user[msg.sender].userAddress ==
+        //         address(),
+        //     "Invalid Account"
+        // );
 
         user[msg.sender].signatureHash = _signature;
         user[msg.sender].email = email;
@@ -33,8 +36,10 @@ contract Authentication {
         user[msg.sender].password = password;
         user[msg.sender].repeatPassword = repeatPassword;
         nbOfUsers++;
-
-        return "Successfully Registered";
+        require( nbOfUsers == 1,
+            "Successfully Registered"
+        );
+        emit message("Successfully Registered");
     }
 
     function getSignatureHash() public view returns (string memory) {
@@ -50,4 +55,18 @@ contract Authentication {
     function getUsername() public view returns (string memory) {
         return user[msg.sender].username;
     }
+    function login(string memory username, string memory password) public {
+
+        string memory _username= getUsername();
+        string memory _password= user[msg.sender].password;
+
+        if(keccak256(bytes(_username)) == keccak256(bytes(username)) && keccak256(bytes(_password)) == keccak256(bytes(password)) ) {
+
+            emit message(username);
+        } else {
+
+            emit message("User doesnot exist !! Register and try again !!") ;
+        }
+    }
+       
 }
