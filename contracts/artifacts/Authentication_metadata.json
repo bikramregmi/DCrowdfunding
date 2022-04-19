@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.6+commit.11564f7e"
+		"version": "0.8.13+commit.abaa5c0e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -11,17 +11,44 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
+				"inputs": [],
+				"name": "getProjectDetails",
+				"outputs": [
 					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
+						"components": [
+							{
+								"internalType": "string",
+								"name": "projectName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "deadline",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "amount",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							}
+						],
+						"internalType": "struct Authentication.Project[]",
+						"name": "",
+						"type": "tuple[]"
 					}
 				],
-				"name": "message",
-				"type": "event"
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -102,6 +129,45 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "projects",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "projectName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "deadline",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "amount",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "_signature",
 						"type": "string"
@@ -137,6 +203,40 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "projectName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "deadline",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "amount",
+						"type": "string"
+					}
+				],
+				"name": "saveProject",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -154,7 +254,7 @@
 		"compilationTarget": {
 			"contracts/authentication.sol": "Authentication"
 		},
-		"evmVersion": "berlin",
+		"evmVersion": "london",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -167,11 +267,11 @@
 	},
 	"sources": {
 		"contracts/authentication.sol": {
-			"keccak256": "0x90316e19a3baa314f2d7d772a56fd8194f220b86f331d051305bb012f334994b",
+			"keccak256": "0x6f2df1d2bd4c3bd170f303d0a8dcedff7371c77d7c9e7131a346b1171c0ebbd5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eae9876a90e61db208b4dc10339ed294d0bb6323f1214e96d35fd854d5e83c1b",
-				"dweb:/ipfs/QmTtUviPWmgpnNACARtimt35BFkn2PbjnksJAn1ynCcF5C"
+				"bzz-raw://ef1c4f1d18ed45bb37eddffba11f1421261daf44053af10eab32d4b57bd787bf",
+				"dweb:/ipfs/QmewWHpAD6w3FpR86vWnHXvFFoVtPetvrVSETML8UkzbPo"
 			]
 		}
 	},
