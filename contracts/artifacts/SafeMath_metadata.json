@@ -1,0 +1,44 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/fundTransfer.sol": "SafeMath"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/fundTransfer.sol": {
+			"keccak256": "0xed0476595b7d5cd7902edac751f1dfa292533c340b909408f51ff05bc851cd8b",
+			"urls": [
+				"bzz-raw://e48b887832060ee5a7f5a9615e6fd9615f1eddc03097e1d7de6351a97c40363f",
+				"dweb:/ipfs/QmQKyKb3EcdUAkbBzJPdwuhEbdpKJJQnQVaCpjqi28qw8Z"
+			]
+		}
+	},
+	"version": 1
+}

@@ -11,7 +11,13 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					}
+				],
 				"name": "getProjectDetails",
 				"outputs": [
 					{
@@ -267,11 +273,11 @@
 	},
 	"sources": {
 		"contracts/authentication.sol": {
-			"keccak256": "0x6f2df1d2bd4c3bd170f303d0a8dcedff7371c77d7c9e7131a346b1171c0ebbd5",
+			"keccak256": "0x02b5870d139b342afc53acd4f7f836e38ab5f7e83a305e6f9c72bf1bcb588d34",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ef1c4f1d18ed45bb37eddffba11f1421261daf44053af10eab32d4b57bd787bf",
-				"dweb:/ipfs/QmewWHpAD6w3FpR86vWnHXvFFoVtPetvrVSETML8UkzbPo"
+				"bzz-raw://de64bada6a1b72ece818e44732c642af66dbcb46cd0eb195c8baa4141362eb7b",
+				"dweb:/ipfs/QmQha5M2KPeVfY2q9KTMYgcMeA1VCSd6WuJ7o71bG9jUeA"
 			]
 		}
 	},
